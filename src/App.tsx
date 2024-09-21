@@ -27,7 +27,7 @@ function App() {
     <Authenticator>
       {({ signOut, user }) => (
         <main>
-          <h1>My todos</h1>
+          <h1>{user?.signInDetails?.loginId}のTodo</h1>
           <button onClick={createTodo}>+ new</button>
           <ul>
             {todos.map((todo) => (
@@ -37,7 +37,6 @@ function App() {
             ))}
           </ul>
           <div>
-            {user?.username}
             <br />
             🥳 App successfully hosted. Try creating a new todo.
             <br />
